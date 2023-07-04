@@ -1,0 +1,261 @@
+from users.models import *
+User.objects.create_user(username="admin@gmail.com",email = "abhi@gmail.com",password="Abhinai@10",verified=True,user_type='admin')
+
+teachers
+
+teacher1
+teacher2
+teacher3
+teacher4
+teacher5
+
+Student.objects.all().delete()
+for i in User.objects.all()[6:]:
+    i.delete()
+    
+
+
+http://127.0.0.1:8000/api/students/assignments
+
+{
+    "success": "0",
+    "assignments": [
+        {
+            "id": 1,
+            "title": "title3",
+            "assignment_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706274364792013?alt=media&token=2",
+            "datePosted": "2022-11-05T23:11:26Z",
+            "due_date": "2022-11-07T23:11:26Z",
+            "assignedBy": {
+                "teacherId": 1,
+                "teacherName": "teacher1"
+            },
+            "marks": 9,
+            "reviewed": true,
+            "submitted": true,
+            "answerlink": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2FSubj14CSEC%2FAbhinai%27s%20Resume.pdf1667706415842596796?alt=media&token=2f462244-fa4e-4149-b370-d5cd706d2669",
+            "subject_full_code": "Subj1",
+            "subject_short_code": "S1",
+            "color_code": "#36454F",
+            "submission_date": "2022-11-06T14:46:55Z"
+        },
+        {
+            "id": 2,
+            "title": "title3",
+            "assignment_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706310328089507?alt=media&token=2",
+            "datePosted": "2022-11-05T23:11:26Z",
+            "due_date": "2022-11-07T23:11:26Z",
+            "assignedBy": {
+                "teacherId": 1,
+                "teacherName": "teacher1"
+            },
+            "marks": null,
+            "reviewed": false,
+            "submitted": false,
+            "answerlink": null,
+            "subject_full_code": "Subj2",
+            "subject_short_code": "S2",
+            "color_code": "#FF0000",
+            "submission_date": null
+        },
+        {
+            "id": 3,
+            "title": "assignment",
+            "assignment_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments_questions%2Fassignment1673885927893778958?alt=media&token=2",
+            "datePosted": "2023-01-17T03:18:47Z",
+            "due_date": "2023-01-19T11:00:00Z",
+            "assignedBy": {
+                "teacherId": 1,
+                "teacherName": "teacher1"
+            },
+            "marks": null,
+            "reviewed": false,
+            "submitted": false,
+            "answerlink": null,
+            "subject_full_code": "Subj1",
+            "subject_short_code": "S1",
+            "color_code": "#36454F",
+            "submission_date": null
+        }
+    ]
+}
+
+
+http://127.0.0.1:8000/api/class-assignments?year=4&branch=CSE&section=C&semester=1&subject=Subj1
+
+{
+    "success": "1",
+    "students_data": {
+        "title3": [
+            {
+                "id": 1,
+                "student_id": 3,
+                "student_answer_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2FSubj14CSEC%2FAbhinai%27s%20Resume.pdf1667706415842596796?alt=media&token=2f462244-fa4e-4149-b370-d5cd706d2669",
+                "due_date": "2022-11-07T23:11:26Z",
+                "submission_date": "2022-11-06T14:46:55Z",
+                "marks": 9,
+                "roll_no": "19bq1a05i7",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706274364792013?alt=media&token=2",
+                "assignment_title": "title3"
+            },
+            {
+                "id": 1,
+                "student_id": 4,
+                "student_answer_link": null,
+                "due_date": "2022-11-07T23:11:26Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05f1",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706274364792013?alt=media&token=2",
+                "assignment_title": "title3"
+            },
+            {
+                "id": 1,
+                "student_id": 8,
+                "student_answer_link": null,
+                "due_date": "2022-11-07T23:11:26Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05d2",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706274364792013?alt=media&token=2",
+                "assignment_title": "title3"
+            },
+            {
+                "id": 1,
+                "student_id": 12,
+                "student_answer_link": null,
+                "due_date": "2022-11-07T23:11:26Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05d6",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706274364792013?alt=media&token=2",
+                "assignment_title": "title3"
+            },
+            {
+                "id": 1,
+                "student_id": 15,
+                "student_answer_link": null,
+                "due_date": "2022-11-07T23:11:26Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05d9",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments%2Ftitle31667706274364792013?alt=media&token=2",
+                "assignment_title": "title3"
+            }
+        ],
+        "assignment": [
+            {
+                "id": 3,
+                "student_id": 3,
+                "student_answer_link": null,
+                "due_date": "2023-01-19T11:00:00Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05i7",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments_questions%2Fassignment1673885927893778958?alt=media&token=2",
+                "assignment_title": "assignment"
+            },
+            {
+                "id": 3,
+                "student_id": 4,
+                "student_answer_link": null,
+                "due_date": "2023-01-19T11:00:00Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05f1",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments_questions%2Fassignment1673885927893778958?alt=media&token=2",
+                "assignment_title": "assignment"
+            },
+            {
+                "id": 3,
+                "student_id": 8,
+                "student_answer_link": null,
+                "due_date": "2023-01-19T11:00:00Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05d2",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments_questions%2Fassignment1673885927893778958?alt=media&token=2",
+                "assignment_title": "assignment"
+            },
+            {
+                "id": 3,
+                "student_id": 12,
+                "student_answer_link": null,
+                "due_date": "2023-01-19T11:00:00Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05d6",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments_questions%2Fassignment1673885927893778958?alt=media&token=2",
+                "assignment_title": "assignment"
+            },
+            {
+                "id": 3,
+                "student_id": 15,
+                "student_answer_link": null,
+                "due_date": "2023-01-19T11:00:00Z",
+                "submission_date": null,
+                "marks": null,
+                "roll_no": "19bq1a05d9",
+                "subject": "Subj1",
+                "subject_code": "S1",
+                "subject_color": "#36454F",
+                "question_link": "https://firebasestorage.googleapis.com/v0/b/clg-proj-5d15e.appspot.com/o/assignments_questions%2Fassignment1673885927893778958?alt=media&token=2",
+                "assignment_title": "assignment"
+            }
+        ]
+    }
+}
+
+
+
+{
+    student_details
+    details:{
+        subject:{
+            subject_name,
+            assignments:[
+                {
+                    title,
+                    question_link,
+                    answer_link,
+                    marks,
+                    feedback
+                },
+                {
+                    
+                }
+            ]
+        }
+
+    }
+}
+
+
+password: Abhinai@10
